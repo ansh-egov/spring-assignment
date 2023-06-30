@@ -28,7 +28,9 @@ public class UserServices {
     }
 
     public User createUser(User user){
-        String sql = "INSERT INTO my_users (name, gender, mobile_number, address) VALUES (?, ?, ?, ?)";
+        System.out.println(user);
+//        String partitionName = user.isIs_active().equals("active") ? "users_active" : "users_inactive";
+        String sql = "INSERT INTO my_users (name, gender, mobile_number, address,is_active) VALUES (?, ?, ?, ?,?)";
         KeyHolder keyHolder = new GeneratedKeyHolder();
 
         jdbcTemplate.update(connection -> {
@@ -37,6 +39,7 @@ public class UserServices {
             ps.setString(2, user.getGender());
             ps.setString(3, user.getMobileNumber());
             ps.setString(4, user.getAddress());
+            ps.setString(5,user.isIs_active());
             return ps;
         }, keyHolder);
 
@@ -79,6 +82,10 @@ public class UserServices {
             params.add(user.getAddress());
         }
 
+        if (user.isIs_active() != null) {
+            sql.append(" is_active = ?,");
+            params.add(user.isIs_active());
+        }
         // Remove the trailing comma
         sql.deleteCharAt(sql.length() - 1);
 

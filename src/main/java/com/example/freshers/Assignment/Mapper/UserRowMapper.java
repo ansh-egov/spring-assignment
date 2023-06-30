@@ -15,7 +15,8 @@ public class UserRowMapper implements RowMapper<User> {
         String gender = rs.getString("gender");
         String mobileNumber = rs.getString("mobile_number");
         String address = rs.getString("address");
+        String is_active = rs.getString("is_active");
 
-        return new User(id, name, gender, mobileNumber, address);
+        return new User(id, name, gender, mobileNumber, address,is_active);
     }
 }

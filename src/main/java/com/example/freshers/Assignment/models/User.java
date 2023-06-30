@@ -6,24 +6,27 @@ public class User {
     private String gender;
     private String mobileNumber;
     private String address;
+    private  String is_active;
 
     public User(){
 
     }
 
-    public User(String name, String gender, String mobileNumber, String address) {
+    public User(String name, String gender, String mobileNumber, String address,String is_active) {
         this.name = name;
         this.gender = gender;
         this.mobileNumber = mobileNumber;
         this.address = address;
+        this.is_active = is_active;
     }
 
-    public User(Long id, String name, String gender, String mobileNumber, String address) {
+    public User(Long id, String name, String gender, String mobileNumber, String address,String is_active) {
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.mobileNumber = mobileNumber;
         this.address = address;
+        this.is_active = is_active;
     }
 
     @Override
@@ -34,6 +37,7 @@ public class User {
                 ", gender='" + gender + '\'' +
                 ", mobileNumber='" + mobileNumber + '\'' +
                 ", address='" + address + '\'' +
+                ", is_active='" + is_active + '\'' +
                 '}';
     }
 
@@ -75,5 +79,13 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String isIs_active() {
+        return is_active;
+    }
+
+    public void setIs_active(String is_active) {
+        this.is_active = is_active;
     }
 }

@@ -51,7 +51,7 @@ public class UserController {
                 System.out.println("User not found");
                 return null;
             }
-
+            System.out.println(user);
             return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
         }catch (Exception e){
             System.out.println("Error in searching the user: "+ e.toString());
