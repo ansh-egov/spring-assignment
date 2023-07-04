@@ -1,33 +1,37 @@
 package com.example.freshers.Assignment.models;
 
+import java.util.UUID;
+
 public class User {
-    private Long id;
+    private UUID id;
     private String name;
     private String gender;
     private String mobileNumber;
-    private String address;
-    private  String is_active;
+    private Address address;
+    private  String isActive;
+    private  Long createdTime;
 
     public User(){
 
     }
 
-    public User(String name, String gender, String mobileNumber, String address,String is_active) {
+    public User(String name, String gender, String mobileNumber, Address address,String isActive, Long createdTime) {
         this.name = name;
         this.gender = gender;
         this.mobileNumber = mobileNumber;
         this.address = address;
-        this.is_active = is_active;
+        this.isActive = isActive;
+        this.createdTime = createdTime;
     }
 
-    public User(Long id, String name, String gender, String mobileNumber, String address,String is_active) {
-        this.id = id;
+    public User(String name, String gender, String mobileNumber, Address address,String isActive) {
         this.name = name;
         this.gender = gender;
         this.mobileNumber = mobileNumber;
         this.address = address;
-        this.is_active = is_active;
+        this.isActive = isActive;
     }
+
 
     @Override
     public String toString() {
@@ -37,15 +41,16 @@ public class User {
                 ", gender='" + gender + '\'' +
                 ", mobileNumber='" + mobileNumber + '\'' +
                 ", address='" + address + '\'' +
-                ", is_active='" + is_active + '\'' +
+                ", isActive='" + isActive + '\'' +
+                ", createdTime='" + createdTime + '\'' +
                 '}';
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
@@ -73,19 +78,27 @@ public class User {
         this.mobileNumber = mobileNumber;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public String isIs_active() {
-        return is_active;
+    public String getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(String is_active) {
-        this.is_active = is_active;
+    public void setIsActive(String isActive) {
+        this.isActive = isActive;
+    }
+
+    public Long getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(Long createdTime) {
+        this.createdTime = createdTime;
     }
 }

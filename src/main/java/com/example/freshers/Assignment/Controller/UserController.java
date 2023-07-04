@@ -27,32 +27,21 @@ public class UserController {
     }
 
     @RequestMapping(value = "/_create",method = RequestMethod.POST)
-    public ResponseEntity<User> createUser(@RequestBody User user) throws IOException{
+    public ResponseEntity<String> createUser(@RequestBody List<User> users) throws IOException{
         try {
-            User createdUser = userServices.createUser(user);
-            return new ResponseEntity<User>(createdUser, HttpStatus.CREATED);
+            userServices.createUsers(users);
+            return new ResponseEntity<String>("Users created Successfully",HttpStatus.CREATED);
         }catch (Exception e){
-            System.out.println("Cannot create user: " + e.toString());
-            return null;
+            return new ResponseEntity<String>("Cannot create users: "+ e.toString(),HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @RequestMapping(value = "/_search", method = RequestMethod.GET)
-    public ResponseEntity<User> searchUser(@RequestBody UserSearchCriteria userSearchCriteria){
+    public ResponseEntity<List<User>> searchUser(@RequestBody UserSearchCriteria userSearchCriteria){
         try{
-            User user;
-
-            if(userSearchCriteria.getId() != null){
-                user = userServices.searchUserById(userSearchCriteria.getId());
-            }else{
-                user = userServices.searchUserByMobileNumber(userSearchCriteria.getMobileNumber());
-            }
-            if(user == null){
-                System.out.println("User not found");
-                return null;
-            }
-            System.out.println(user);
-            return new ResponseEntity<User>(user,HttpStatus.ACCEPTED);
+            List<User> users = userServices.searchUser(userSearchCriteria);
+            System.out.println(users);
+            return new ResponseEntity<List<User>>(users,HttpStatus.ACCEPTED);
         }catch (Exception e){
             System.out.println("Error in searching the user: "+ e.toString());
             return null;
@@ -60,32 +49,32 @@ public class UserController {
     }
 
     @RequestMapping(value = "/_update", method = RequestMethod.PATCH)
-    public ResponseEntity<User> updateUser(@RequestBody User user){
+    public ResponseEntity<String> updateUser(@RequestBody List<User> users){
         try{
-            User isUser = userServices.searchUserById(user.getId());
-
-            if(isUser == null){
-                System.out.println("User not found");
-                return null;
+            for (User user: users){
+//                System.out.println(user);
+//                User isUser = userServices.searchUser(new UserSearchCriteria(user.getId(),user.getMobileNumber()));
+//                if(isUser == null){
+//                    System.out.println("User not found");
+//                    return null;
+//                }
+                User user1 = userServices.updateUser(user);
             }
-            User user1 = userServices.updateUser(user);
-            return new ResponseEntity<User>(user1,HttpStatus.ACCEPTED);
+            return new ResponseEntity<String>("Users updated successfully to: " + users.toString(),HttpStatus.ACCEPTED);
         }catch (Exception e){
-            System.out.println("Cannot update user: " + e.toString());
-            return new ResponseEntity<User>(new User(),HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<String>("Cannot update user: " + e.toString(),HttpStatus.BAD_REQUEST);
         }
     }
 
     @RequestMapping(value = "/_delete",method = RequestMethod.DELETE)
     public ResponseEntity<String> deleteUser(@RequestBody User user){
         try{
-            User isUser = userServices.searchUserById(user.getId());
+            List<User> users = userServices.searchUser(new UserSearchCriteria(user.getId(),user.getMobileNumber()));
 
-            if(isUser == null){
-
+            if(users.isEmpty()){
                 return new ResponseEntity<>("User not found",HttpStatus.BAD_REQUEST);
             }
-            userServices.deleteUser(user.getId());
+            userServices.deleteUser(users.get(0).getId());
             return new ResponseEntity<>("Deleted",HttpStatus.ACCEPTED);
         }catch (Exception e){
             return new ResponseEntity<>("Cannot delete user: " + e.toString(),HttpStatus.BAD_REQUEST);

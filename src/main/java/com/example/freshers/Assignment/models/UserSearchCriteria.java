@@ -1,14 +1,16 @@
 package com.example.freshers.Assignment.models;
 
+import java.util.UUID;
+
 public class UserSearchCriteria {
-    private Long id;
+    private UUID id;
     private String mobileNumber;
 
     public UserSearchCriteria(){
 
     }
 
-    public UserSearchCriteria(Long id) {
+    public UserSearchCriteria(UUID id) {
         this.id = id;
     }
 
@@ -16,16 +18,16 @@ public class UserSearchCriteria {
         this.mobileNumber = mobileNumber;
     }
 
-    public UserSearchCriteria(Long id, String mobileNumber) {
+    public UserSearchCriteria(UUID id, String mobileNumber) {
         this.id = id;
         this.mobileNumber = mobileNumber;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

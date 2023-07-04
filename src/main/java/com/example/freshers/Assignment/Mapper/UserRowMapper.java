@@ -1,22 +1,33 @@
 package com.example.freshers.Assignment.Mapper;
 
+import com.example.freshers.Assignment.models.Address;
 import com.example.freshers.Assignment.models.User;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 
 public class UserRowMapper implements RowMapper<User> {
 
-    @Override
     public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Long id = rs.getLong("id");
-        String name = rs.getString("name");
-        String gender = rs.getString("gender");
-        String mobileNumber = rs.getString("mobile_number");
-        String address = rs.getString("address");
-        String is_active = rs.getString("is_active");
-
-        return new User(id, name, gender, mobileNumber, address,is_active);
+        User user = new User();
+        user.setId(UUID.fromString(rs.getString("id")));
+        user.setName(rs.getString("name"));
+        user.setGender(rs.getString("gender"));
+        user.setMobileNumber(rs.getString("mobile_number"));
+        String addressJson = rs.getString("address");
+        ObjectMapper objectMapper = new ObjectMapper();
+        try {
+            Address address = objectMapper.readValue(addressJson, Address.class);
+            user.setAddress(address);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error parsing address JSON", e);
+        }
+        user.setIsActive(rs.getString("is_active"));
+        user.setCreatedTime(rs.getLong("created_time"));
+        return user;
     }
 }
