@@ -2,18 +2,18 @@ package com.example.freshers.Assignment.models;
 
 public class Address{
     private String city;
-    private String street_name;
-    private String street_address;
-    private String zip_code;
+    private String streetName;
+    private String streetAddress;
+    private String zipCode;
     private String state;
     private String country;
     private Coordinates coordinates;
 
-    public Address(String city, String street_name, String street_address, String zip_code, String state, String country, Coordinates coordinates) {
+    public Address(String city, String streetName, String streetAddress, String zipCode, String state, String country, Coordinates coordinates) {
         this.city = city;
-        this.street_name = street_name;
-        this.street_address = street_address;
-        this.zip_code = zip_code;
+        this.streetName = streetName;
+        this.streetAddress = streetAddress;
+        this.zipCode = zipCode;
         this.state = state;
         this.country = country;
         this.coordinates = coordinates;
@@ -27,9 +27,9 @@ public class Address{
     public String toString() {
         return "Address{" +
                 "city='" + city + '\'' +
-                ", street_name='" + street_name + '\'' +
-                ", street_address='" + street_address + '\'' +
-                ", zip_code='" + zip_code + '\'' +
+                ", streetName='" + streetName + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
+                ", zipCode='" + zipCode + '\'' +
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 ", coordinates=" + coordinates +
@@ -44,28 +44,28 @@ public class Address{
         this.city = city;
     }
 
-    public String getStreet_name() {
-        return street_name;
+    public String getStreetName() {
+        return streetName;
     }
 
-    public void setStreet_name(String street_name) {
-        this.street_name = street_name;
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
-    public String getStreet_address() {
-        return street_address;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setStreet_address(String street_address) {
-        this.street_address = street_address;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
-    public String getZip_code() {
-        return zip_code;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setZip_code(String zip_code) {
-        this.zip_code = zip_code;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public String getState() {

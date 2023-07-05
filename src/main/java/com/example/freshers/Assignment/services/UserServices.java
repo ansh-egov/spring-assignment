@@ -7,11 +7,9 @@ import com.example.freshers.Assignment.models.Coordinates;
 import com.example.freshers.Assignment.models.User;
 import com.example.freshers.Assignment.models.UserSearchCriteria;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -41,11 +39,11 @@ public class UserServices {
                         "id UUID DEFAULT uuid_generate_v4(), " +
                         "name VARCHAR(255), " +
                         "gender VARCHAR(255), " +
-                        "mobile_number VARCHAR(255), " +
+                        "mobileNumber VARCHAR(255), " +
                         "address JSON, " +
-                        "is_active VARCHAR(255), " +
-                        "created_time BIGINT " +
-                        ") PARTITION BY RANGE (is_active);"
+                        "isActive VARCHAR(255), " +
+                        "createdTime BIGINT " +
+                        ") PARTITION BY RANGE (isActive);"
         );
         jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS users_active PARTITION OF my_users\n" +
                 "  FOR VALUES FROM ('active') TO ('inactive');");
@@ -60,17 +58,17 @@ public class UserServices {
     }
 
     public boolean getUserByNameAndMobileNumber(String name, String mobileNumber) {
-        String sql = "SELECT COUNT(*) FROM my_users WHERE name = ? AND mobile_number = ?";
+        String sql = "SELECT COUNT(*) FROM my_users WHERE name = ? AND mobileNumber = ?";
         Integer x = jdbcTemplate.queryForObject(sql,Integer.class,name,mobileNumber);
         return x == 0;
     }
 
     public List<User> createUsers(List<User> userList) throws UserCreationException {
-        System.out.println(userList);
+//        System.out.println(userList);
         List<User> createdUserList = new ArrayList<>();
         List<User> duplicateUserList = new ArrayList<>();
 
-        String sql = "INSERT INTO my_users (name, gender, mobile_number, address, is_active, created_time) VALUES (?, ?, ?, ?::json, ?, ?)";
+        String sql = "INSERT INTO my_users (name, gender, mobileNumber, address, isActive, createdTime) VALUES (?, ?, ?, ?::json, ?, ?)";
         Long currentTime = Instant.now().getEpochSecond();
 
         for (User user : userList) {
@@ -101,11 +99,12 @@ public class UserServices {
         Map<String, Object> data = response.getBody();
         Map<String, Object> addressData = (Map<String, Object>) data.get("address");
 
+        System.out.println(addressData.toString());
         Address address = new Address();
         address.setCity((String) addressData.get("city"));
-        address.setStreet_name((String) addressData.get("street_name"));
-        address.setStreet_address((String) addressData.get("street_address"));
-        address.setZip_code((String) addressData.get("zip_code"));
+        address.setStreetName((String) addressData.get("street_name"));
+        address.setStreetAddress((String) addressData.get("street_address"));
+        address.setZipCode((String) addressData.get("zip_code"));
         address.setState((String) addressData.get("state"));
         address.setCountry((String) addressData.get("country"));
 
@@ -152,13 +151,13 @@ public class UserServices {
             query.append(" ID=?");
             params.add(userSearchCriteria.getId());
         }else if(userSearchCriteria.getMobileNumber() != null){
-            query.append(" MOBILE_NUMBER=?");
+            query.append(" MOBILENUMBER=?");
             params.add(userSearchCriteria.getMobileNumber());
         }
         return jdbcTemplate.query(query.toString(),new UserRowMapper(),params.toArray());
     }
 
-    public User updateUser(User user){
+    public void updateUser(User user){
         StringBuilder sql = new StringBuilder("UPDATE my_users SET");
         List<Object> params = new ArrayList<>();
 
@@ -173,17 +172,13 @@ public class UserServices {
         }
 
         if (user.getMobileNumber() != null) {
-            sql.append(" mobile_number = ?,");
+            sql.append(" mobileNumber = ?,");
             params.add(user.getMobileNumber());
         }
 
-        if (user.getAddress() != null) {
-            sql.append(" address = ?,");
-            params.add(user.getAddress());
-        }
 
         if (user.getIsActive() != null) {
-            sql.append(" is_active = ?,");
+            sql.append(" isActive = ?,");
             params.add(user.getIsActive());
         }
         // Remove the trailing comma
@@ -193,7 +188,6 @@ public class UserServices {
         params.add(user.getId());
 
         jdbcTemplate.update(sql.toString(), params.toArray());
-        return user;
     }
 
     public void deleteUser(UUID id) {

@@ -40,7 +40,6 @@ public class UserController {
     public ResponseEntity<List<User>> searchUser(@RequestBody UserSearchCriteria userSearchCriteria){
         try{
             List<User> users = userServices.searchUser(userSearchCriteria);
-            System.out.println(users);
             return new ResponseEntity<List<User>>(users,HttpStatus.ACCEPTED);
         }catch (Exception e){
             System.out.println("Error in searching the user: "+ e.toString());
@@ -52,13 +51,13 @@ public class UserController {
     public ResponseEntity<String> updateUser(@RequestBody List<User> users){
         try{
             for (User user: users){
-//                System.out.println(user);
-//                User isUser = userServices.searchUser(new UserSearchCriteria(user.getId(),user.getMobileNumber()));
-//                if(isUser == null){
-//                    System.out.println("User not found");
-//                    return null;
-//                }
-                User user1 = userServices.updateUser(user);
+                if(user.getId() == null){
+                    List<User> user1 = userServices.searchUser(new UserSearchCriteria(user.getId(),user.getMobileNumber()));
+                    user.setId(user1.get(0).getId());
+                    userServices.updateUser(user);
+                }else {
+                    userServices.updateUser(user);
+                }
             }
             return new ResponseEntity<String>("Users updated successfully to: " + users.toString(),HttpStatus.ACCEPTED);
         }catch (Exception e){

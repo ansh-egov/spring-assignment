@@ -17,7 +17,7 @@ public class UserRowMapper implements RowMapper<User> {
         user.setId(UUID.fromString(rs.getString("id")));
         user.setName(rs.getString("name"));
         user.setGender(rs.getString("gender"));
-        user.setMobileNumber(rs.getString("mobile_number"));
+        user.setMobileNumber(rs.getString("mobileNumber"));
         String addressJson = rs.getString("address");
         ObjectMapper objectMapper = new ObjectMapper();
         try {
@@ -26,8 +26,8 @@ public class UserRowMapper implements RowMapper<User> {
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Error parsing address JSON", e);
         }
-        user.setIsActive(rs.getString("is_active"));
-        user.setCreatedTime(rs.getLong("created_time"));
+        user.setIsActive(rs.getString("isActive"));
+        user.setCreatedTime(rs.getLong("createdTime"));
         return user;
     }
 }
