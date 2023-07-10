@@ -63,32 +63,18 @@ public class UserServices {
         return x == 0;
     }
 
-    public List<User> createUsers(List<User> userList) throws UserCreationException {
-//        System.out.println(userList);
-        List<User> createdUserList = new ArrayList<>();
-        List<User> duplicateUserList = new ArrayList<>();
-
+    public void createUsers(User user) throws UserCreationException {
         String sql = "INSERT INTO my_users (name, gender, mobileNumber, address, isActive, createdTime) VALUES (?, ?, ?, ?::json, ?, ?)";
         Long currentTime = Instant.now().getEpochSecond();
-
-        for (User user : userList) {
-            try {
-                if(getUserByNameAndMobileNumber(user.getName(),user.getMobileNumber())){
-                    User createdUser = createUser(user, sql, currentTime);
-                    createdUserList.add(createdUser);
-                }else{
-                    throw new IllegalArgumentException("User with the same name and mobile number already exists");
-                }
-
-            } catch (DataIntegrityViolationException e) {
-                duplicateUserList.add(user);
+        try {
+            if(getUserByNameAndMobileNumber(user.getName(),user.getMobileNumber())){
+                User createdUser = createUser(user, sql, currentTime);
+            }else{
+                throw new IllegalArgumentException("User with the same name and mobile number already exists");
             }
-        }
 
-        if (duplicateUserList.isEmpty()) {
-            return createdUserList;
-        } else {
-            throw new UserCreationException(createdUserList, duplicateUserList);
+        } catch (DataIntegrityViolationException e) {
+            throw  new DataIntegrityViolationException(e.toString());
         }
     }
 
@@ -99,7 +85,7 @@ public class UserServices {
         Map<String, Object> data = response.getBody();
         Map<String, Object> addressData = (Map<String, Object>) data.get("address");
 
-        System.out.println(addressData.toString());
+//        System.out.println(addressData.toString());
         Address address = new Address();
         address.setCity((String) addressData.get("city"));
         address.setStreetName((String) addressData.get("street_name"));
