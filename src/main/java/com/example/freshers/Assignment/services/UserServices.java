@@ -9,6 +9,7 @@ import com.example.freshers.Assignment.models.UserSearchCriteria;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -26,6 +27,9 @@ import java.util.*;
 public class UserServices {
     JdbcTemplate jdbcTemplate;
     RestTemplate restTemplate;
+
+    @Value("${api.address-url}")
+    private String url;
 
     @Autowired
     public UserServices(JdbcTemplate jdbcTemplate){
@@ -67,12 +71,7 @@ public class UserServices {
         String sql = "INSERT INTO my_users (name, gender, mobileNumber, address, isActive, createdTime) VALUES (?, ?, ?, ?::json, ?, ?)";
         Long currentTime = Instant.now().getEpochSecond();
         try {
-            if(getUserByNameAndMobileNumber(user.getName(),user.getMobileNumber())){
-                User createdUser = createUser(user, sql, currentTime);
-            }else{
-                throw new IllegalArgumentException("User with the same name and mobile number already exists");
-            }
-
+           User createdUser = createUser(user,sql,currentTime);
         } catch (DataIntegrityViolationException e) {
             throw  new DataIntegrityViolationException(e.toString());
         }
@@ -80,7 +79,6 @@ public class UserServices {
 
     private User createUser(User user, String sql, Long currentTime) {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "https://random-data-api.com/api/v2/users?size=1";
         ResponseEntity<Map> response = restTemplate.getForEntity(url, Map.class);
         Map<String, Object> data = response.getBody();
         Map<String, Object> addressData = (Map<String, Object>) data.get("address");

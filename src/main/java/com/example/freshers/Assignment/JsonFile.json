@@ -1,0 +1,1512 @@
+{
+  "ResponseInfo": {
+    "apiId": "Rainmaker",
+    "ver": ".01",
+    "ts": 0,
+    "resMsgId": null,
+    "msgId": "20170310130900|en_IN",
+    "status": "200 OK"
+  },
+  "Demands": [
+    {
+      "isPaymentCompleted": true,
+      "id": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/223303",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "845f93e1-b326-4b2c-b9f5-6e3b1b340d40",
+        "id": 34231,
+        "userName": "cf3ed820-5362-486c-ae15-af5e9ff2ccd0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "Lata",
+        "gender": "FEMALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": null,
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": "same",
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "A"
+        }
+      },
+      "taxPeriodFrom": 1648837799000,
+      "taxPeriodTo": 1651053851354,
+      "demandDetails": [
+        {
+          "id": "0afd1115-ef18-430a-b6c0-c461656b0fc1",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -500,
+          "collectionAmount": -500,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651735123187,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "781a7677-72c5-48f1-bf82-c132f3316244",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -1236.15,
+          "collectionAmount": -1236.15,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1652790493883,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "1c91ce9f-71dd-40f8-b2c8-5fe7bb810d00",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 109.81,
+          "collectionAmount": 109.81,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651053856130,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "7b2b8ea4-97dd-4d0b-ba3d-ea9cedde867f",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -200,
+          "collectionAmount": -200,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651690722742,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "85a372c7-b7f1-41d6-a7cc-d3b8b47b5f22",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -200,
+          "collectionAmount": -200,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651689390770,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "96fb927d-d232-476c-b385-151e6f52ee89",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.43,
+          "collectionAmount": -0.43,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651465070416,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "3702b8a0-1776-4489-86b0-0add60f17f17",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.04,
+          "collectionAmount": 0.04,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651053856130,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "8eb4f4c5-87f3-49a5-b737-4fca38d97e56",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": -55,
+          "collectionAmount": -55,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651736382808,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "8a9e4410-4ed6-4e04-bb9c-387ab916dfa3",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": -1,
+          "collectionAmount": -1,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651668109800,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "03307641-5a15-462f-8d91-7c3575d82912",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.5,
+          "collectionAmount": 0.5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "7d82122e-1e91-4f34-893f-d16963af217a",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651722652712,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "1b6ec67b-2ceb-4af2-9ba1-e7eab4949bf9",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 2196.15,
+          "collectionAmount": 2196.15,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651053856130,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "255dadd4-4d4b-48ca-aa5f-eb9bf836375b",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.5,
+          "collectionAmount": -0.5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651817460704,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "31e71401-3433-4db3-b054-d1822fa2fce0",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": -100,
+          "collectionAmount": -100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651736382808,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "084ffbf2-03a9-4356-92a2-47afa00a79c0",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": -123.62,
+          "collectionAmount": -123.62,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1652790493883,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "5868d582-4e29-46d6-b414-f96918dd38be",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 219.62,
+          "collectionAmount": 219.62,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651465070416,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "f585a9e9-c279-41d7-8aeb-a9558f6d1746",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -50,
+          "collectionAmount": -50,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651736382808,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "74477ae6-febc-4568-bcae-5dfccb56343d",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": -41,
+          "collectionAmount": -41,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651668109800,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "a5576aab-3a0d-472a-9c33-ee4bab341d1a",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": -48,
+          "collectionAmount": -48,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651668109800,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "19d368c9-266c-4d33-9a67-0eb35f6689bf",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.77,
+          "collectionAmount": 0.77,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1652858261514,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "5c282a3f-7970-4901-bd14-8fbd23241bf7",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 109.81,
+          "collectionAmount": 109.81,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651465070416,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "1e891efb-dc2f-4304-a168-b872d37efbaf",
+          "demandId": "e9af2839-f6ca-46d9-bde6-37bcb95c3370",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -10,
+          "collectionAmount": -10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651668109800,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1651053856130,
+        "lastModifiedTime": 1662977818116
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "ccf84235-57cd-4f3d-a155-0bf6fbe829f9",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/250780",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "789830f2-5e29-4b99-97c6-4cddd603f567",
+        "id": 46577,
+        "userName": "1a46d4cb-232d-4b56-915d-8f75140ff6c0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "newonw",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "B"
+        }
+      },
+      "taxPeriodFrom": 1648837799000,
+      "taxPeriodTo": 1648924199000,
+      "demandDetails": [
+        {
+          "id": "de9a108e-7f64-4c96-9f3f-9bb2d4421e21",
+          "demandId": "ccf84235-57cd-4f3d-a155-0bf6fbe829f9",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "4d4c8a9e-d5ed-44f3-a5f5-d1b938ec7819",
+          "demandId": "ccf84235-57cd-4f3d-a155-0bf6fbe829f9",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649312969518,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "233bd88c-2940-4440-8ea6-0adee1bc9da1",
+          "demandId": "ccf84235-57cd-4f3d-a155-0bf6fbe829f9",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 100,
+          "collectionAmount": 100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649312969518,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "b93373d2-f0ba-4f07-b643-619ab219b38d",
+          "demandId": "ccf84235-57cd-4f3d-a155-0bf6fbe829f9",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 10,
+          "collectionAmount": 10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1649312969518,
+        "lastModifiedTime": 1655189031036
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "649b8e32-0755-4f29-af93-79f48c89ac5b",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/250780",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "789830f2-5e29-4b99-97c6-4cddd603f567",
+        "id": 46577,
+        "userName": "1a46d4cb-232d-4b56-915d-8f75140ff6c0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "newonw",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "A"
+        }
+      },
+      "taxPeriodFrom": 1648924199000,
+      "taxPeriodTo": 1649010599000,
+      "demandDetails": [
+        {
+          "id": "f0f635cd-f16b-4bea-aac8-5531bfd32110",
+          "demandId": "649b8e32-0755-4f29-af93-79f48c89ac5b",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 100,
+          "collectionAmount": 100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649314164913,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "b8a488bf-3f17-4f9e-af28-091102b6af13",
+          "demandId": "649b8e32-0755-4f29-af93-79f48c89ac5b",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "ec1d703b-b3cc-4785-8900-509105ed673f",
+          "demandId": "649b8e32-0755-4f29-af93-79f48c89ac5b",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649314164913,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "71e9c3fb-5ffc-4e60-9a04-2193b216cc43",
+          "demandId": "649b8e32-0755-4f29-af93-79f48c89ac5b",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 10,
+          "collectionAmount": 10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1649314164913,
+        "lastModifiedTime": 1655189031036
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "1efb18e0-a3d1-495e-94af-20982173b653",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/250780",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "789830f2-5e29-4b99-97c6-4cddd603f567",
+        "id": 46577,
+        "userName": "1a46d4cb-232d-4b56-915d-8f75140ff6c0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "newonw",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "B"
+        }
+      },
+      "taxPeriodFrom": 1649010599000,
+      "taxPeriodTo": 1649096999000,
+      "demandDetails": [
+        {
+          "id": "29f2ecdb-3a8c-4dd7-87f8-8c7b72873964",
+          "demandId": "1efb18e0-a3d1-495e-94af-20982173b653",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "0f1fc0a4-e3e7-4111-9218-cfeb160d1650",
+          "demandId": "1efb18e0-a3d1-495e-94af-20982173b653",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 10,
+          "collectionAmount": 10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "1644ccf2-5606-4927-9024-b39cf0494947",
+          "demandId": "1efb18e0-a3d1-495e-94af-20982173b653",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649314542838,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "0f4afa4f-9e56-41a2-8a2f-4e242b4401bf",
+          "demandId": "1efb18e0-a3d1-495e-94af-20982173b653",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 100,
+          "collectionAmount": 100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649314542838,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1649314542838,
+        "lastModifiedTime": 1655189031036
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "623e5b7a-aa62-4988-9cf5-4097ba7db8a2",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/250780",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "789830f2-5e29-4b99-97c6-4cddd603f567",
+        "id": 46577,
+        "userName": "1a46d4cb-232d-4b56-915d-8f75140ff6c0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "newonw",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "B"
+        }
+      },
+      "taxPeriodFrom": 1649096999000,
+      "taxPeriodTo": 1649183399000,
+      "demandDetails": [
+        {
+          "id": "73c4b1a0-f1dd-4e6c-9d62-852125541f13",
+          "demandId": "623e5b7a-aa62-4988-9cf5-4097ba7db8a2",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 100,
+          "collectionAmount": 100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649316384112,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "81d84af4-1366-4c2b-ada3-543a40070872",
+          "demandId": "623e5b7a-aa62-4988-9cf5-4097ba7db8a2",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649316384112,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "99bd1a03-5ce1-4ac6-95b3-cf36f9ab6df0",
+          "demandId": "623e5b7a-aa62-4988-9cf5-4097ba7db8a2",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "f14278d8-2b72-4889-940e-663a11a95b0b",
+          "demandId": "623e5b7a-aa62-4988-9cf5-4097ba7db8a2",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 10,
+          "collectionAmount": 10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1649316384112,
+        "lastModifiedTime": 1655189031036
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/250780",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "789830f2-5e29-4b99-97c6-4cddd603f567",
+        "id": 46577,
+        "userName": "1a46d4cb-232d-4b56-915d-8f75140ff6c0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "newonw",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "C"
+        }
+      },
+      "taxPeriodFrom": 1649183399000,
+      "taxPeriodTo": 1649269799000,
+      "demandDetails": [
+        {
+          "id": "d00e31da-2350-461a-a665-c487b03b2d25",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 0,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1652696844546,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "18fca2fa-ea29-4e87-aea6-17fcdd39f72f",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 10,
+          "collectionAmount": 10,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "6af446b4-cf90-4089-9f4d-df333e183580",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649422822004,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "f6d6ee29-db2a-465f-a147-e2dc89886bbc",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": -5,
+          "collectionAmount": -5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651744810605,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "98a627dc-071d-4ad8-8cd3-a6ba68610fe7",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": -100,
+          "collectionAmount": -100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "90fed312-d88a-4a8a-b411-fe682e5b28cd",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1651674017513,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "58ac560f-fc3b-47ce-8dc9-82a04bd8cfea",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 5,
+          "collectionAmount": 5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649316627426,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "f9d08743-6509-4dd6-8ea7-49b8cc1f4068",
+          "demandId": "199b363f-fc0a-40d9-bf59-7d6364cdd102",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 100,
+          "collectionAmount": 100,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1649316627426,
+            "lastModifiedTime": 1655189031036
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1649316627426,
+        "lastModifiedTime": 1655189031036
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2022-23/256702",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "e1b1e793-1095-4818-9067-7a937ed627af",
+        "id": 72984,
+        "userName": "cba25aa3-9340-4054-8df5-95c5f16311b3",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "Revanna",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "143,  abc, cbz, Ajit Nagar - Area1, Amritsar, ",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "B"
+        }
+      },
+      "taxPeriodFrom": 1649183399000,
+      "taxPeriodTo": 1653503399000,
+      "demandDetails": [
+        {
+          "id": "44a3c704-e9ee-471b-bc64-31c487fb1a0e",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 264.5,
+          "collectionAmount": 264.5,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655816509792,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "09faa74e-25e1-4eb1-b72c-2fe9a6436bd7",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 132.25,
+          "collectionAmount": 132.25,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655807505796,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "bdf9c6a7-102b-4558-8212-ecf7768e7830",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.25,
+          "collectionAmount": 0.25,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655816509792,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "743e0602-16b1-4a1e-abf3-163465a38a49",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.25,
+          "collectionAmount": -0.25,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655807505796,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "ebc15951-ece0-4909-aca9-7722c3674355",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 2645,
+          "collectionAmount": 2645,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655807505796,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "43a4b10a-eb78-4b4f-b8e0-bc80c94a98d7",
+          "demandId": "27f4a5e1-f60e-4b73-ad2d-0a4557e51e71",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 132.25,
+          "collectionAmount": 132.25,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1655816509792,
+            "lastModifiedTime": 1661858260558
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "6d29df57-c2bd-4fd5-ab6c-2815749ebff8",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1655807505796,
+        "lastModifiedTime": 1661858260558
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": false,
+      "id": "0fa03095-f8d9-4992-9651-92e9b588598a",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2022-23/252351",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "c416bcf8-ec8a-4ef3-930c-b5df55bf8819",
+        "id": 48266,
+        "userName": "073c3db6-4375-4878-995b-9d3fd389530f",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "bbcxyz",
+        "gender": "MALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": "12, street1, landmark2, Back Side 33 KVA Grid Patiala Road - Area 1, Amritsar, 143002",
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": null,
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "A"
+        }
+      },
+      "taxPeriodFrom": 1650997799000,
+      "taxPeriodTo": 1654799399000,
+      "demandDetails": [
+        {
+          "id": "cbf9e779-c7ad-4d2a-90a0-5a668f2d2c8f",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.51,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654837276692,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "000d25a7-0ec7-456d-999c-df2999ee14b1",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 186.34,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654837276692,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "711f5226-c66e-494b-a62e-341126039979",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 93.17,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654774274999,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "3484f508-71aa-49cd-b81f-3569c5d7b8ac",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 1863.4,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654774274999,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "3255c37a-f7db-48cd-a8c6-33ab55ba26b0",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.43,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654774274999,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "dfa833e4-b13e-411c-85b7-f69a6383fc10",
+          "demandId": "0fa03095-f8d9-4992-9651-92e9b588598a",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 93.17,
+          "collectionAmount": 0,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "createdTime": 1654837276692,
+            "lastModifiedTime": 1669718290449
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+        "lastModifiedBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "createdTime": 1654774274999,
+        "lastModifiedTime": 1669718290449
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/223303",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "845f93e1-b326-4b2c-b9f5-6e3b1b340d40",
+        "id": 34231,
+        "userName": "cf3ed820-5362-486c-ae15-af5e9ff2ccd0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "Lata",
+        "gender": "FEMALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": null,
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": "same",
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "C"
+        }
+      },
+      "taxPeriodFrom": 1651053851354,
+      "taxPeriodTo": 1651170599000,
+      "demandDetails": [
+        {
+          "id": "e5dfaa67-ffb0-480c-a4ec-b855e517a1df",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 2372.51,
+          "collectionAmount": 2372.51,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "33fcada3-984b-4906-a528-7336e3f03af1",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653551858159,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "c16c40f1-e4ca-4e29-b578-15539697c8b4",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 2372.51,
+          "collectionAmount": 2372.51,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "abfe724b-a93e-4edd-b084-82ecbe22a192",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653646920302,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "2cb690a2-e0e0-431a-a16f-a22a4aa371a6",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 4745.02,
+          "collectionAmount": 4745.02,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "abfe724b-a93e-4edd-b084-82ecbe22a192",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653646920302,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "1002ac59-cc5a-4e09-b226-7c172946cccd",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.34,
+          "collectionAmount": 0.34,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "33fcada3-984b-4906-a528-7336e3f03af1",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653551858159,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "e044051a-6492-4319-ba9d-59a9b58ab335",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.53,
+          "collectionAmount": -0.53,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "abfe724b-a93e-4edd-b084-82ecbe22a192",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653646920302,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "653ddf99-f258-4d6a-90a3-150f76321ab1",
+          "demandId": "d7d7e542-ce17-4d36-9cc0-4101a06b0f7c",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 47450.15,
+          "collectionAmount": 47450.15,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "33fcada3-984b-4906-a528-7336e3f03af1",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1653551858159,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "33fcada3-984b-4906-a528-7336e3f03af1",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1653551858159,
+        "lastModifiedTime": 1662977818116
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    },
+    {
+      "isPaymentCompleted": true,
+      "id": "65b4f686-6285-49ad-927e-c89203cdf561",
+      "tenantId": "pb.amritsar",
+      "consumerCode": "WS/107/2021-22/223303",
+      "consumerType": "waterConnection",
+      "businessService": "WS",
+      "payer": {
+        "uuid": "845f93e1-b326-4b2c-b9f5-6e3b1b340d40",
+        "id": 34231,
+        "userName": "cf3ed820-5362-486c-ae15-af5e9ff2ccd0",
+        "type": "CITIZEN",
+        "salutation": null,
+        "name": "Lata",
+        "gender": "FEMALE",
+        "mobileNumber": "7878787878",
+        "emailId": null,
+        "altContactNumber": null,
+        "pan": null,
+        "aadhaarNumber": null,
+        "permanentAddress": null,
+        "permanentCity": null,
+        "permanentPinCode": null,
+        "correspondenceAddress": "same",
+        "correspondenceCity": null,
+        "correspondencePinCode": null,
+        "active": true,
+        "tenantId": "pb",
+        "address": {
+          "street": "A"
+        }
+      },
+      "taxPeriodFrom": 1651170599000,
+      "taxPeriodTo": 1654194599000,
+      "demandDetails": [
+        {
+          "id": "881a77fc-8371-49f8-8bc2-37752d1b76ce",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_CHARGE",
+          "taxAmount": 1863.4,
+          "collectionAmount": 1863.4,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654152774224,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "54ffa009-1b23-4771-b14c-3ff0cf159d69",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_WATER_CESS",
+          "taxAmount": 93.17,
+          "collectionAmount": 93.17,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654152774224,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "dd825c9e-9cf7-4c9b-afa0-ea76e87d2755",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_TIME_INTEREST",
+          "taxAmount": 93.17,
+          "collectionAmount": 93.17,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654243437187,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "f6033aa6-3cb6-4ae8-b77b-0c2833cca014",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_TIME_PENALTY",
+          "taxAmount": 186.34,
+          "collectionAmount": 186.34,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654243437187,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "2f7f2d60-8eef-4f9f-a7fd-d37f4681b58d",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": 0.43,
+          "collectionAmount": 0.43,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654152774224,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        },
+        {
+          "id": "43e2eaae-fb6a-470e-8adf-4e772722ad59",
+          "demandId": "65b4f686-6285-49ad-927e-c89203cdf561",
+          "taxHeadMasterCode": "WS_Round_Off",
+          "taxAmount": -0.51,
+          "collectionAmount": -0.51,
+          "additionalDetails": null,
+          "auditDetails": {
+            "createdBy": "5b0db5f1-5695-4ce4-ab81-f185a28bfa62",
+            "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+            "createdTime": 1654243437187,
+            "lastModifiedTime": 1662977818116
+          },
+          "tenantId": "pb.amritsar"
+        }
+      ],
+      "auditDetails": {
+        "createdBy": "0031f6f9-67f7-4929-9cd5-4827376733d0",
+        "lastModifiedBy": "94511af9-c533-482d-8a4f-4845d2bc4ea8",
+        "createdTime": 1654152774224,
+        "lastModifiedTime": 1662977818116
+      },
+      "fixedBillExpiryDate": null,
+      "billExpiryTime": 0,
+      "additionalDetails": null,
+      "minimumAmountPayable": 100,
+      "status": "ACTIVE"
+    }
+  ]
+}
