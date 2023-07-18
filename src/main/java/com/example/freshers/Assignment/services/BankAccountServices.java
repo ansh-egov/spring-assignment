@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -30,7 +31,16 @@ public class BankAccountServices {
                 "id UUID DEFAULT uuid_generate_v4() PRIMARY KEY," +
                 "name VARCHAR(255), " +
                 "accountNumber VARCHAR(255)," +
-                "balance DECIMAL" +
+                "balance DECIMAL," +
+                "UNIQUE (accountNumber)" +
+                ");");
+
+        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS TRANSACTIONS(" +
+                "id UUID DEFAULT uuid_generate_v4() PRIMARY KEY," +
+                "accountNumber VARCHAR(255)," +
+                "amount DECIMAL," +
+                "status VARCHAR(255)," +
+                "FOREIGN KEY (accountNumber) REFERENCES BANK (accountNumber)" +
                 ");");
     }
 
@@ -63,6 +73,12 @@ public class BankAccountServices {
         return bankAccount;
     }
 
+    public Void insertTransaction(String accountNumber, BigDecimal amount, String status){
+        String sql = "INSERT INTO TRANSACTIONS (accountNumber, amount, status) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, accountNumber, amount, status);
+        return null;
+    }
+
     public BankAccount findByAccountNumber(String accountNumber){
         String sql = "SELECT * FROM BANK WHERE accountNumber = ?;";
         return jdbcTemplate.queryForObject(sql,new BankAccountRowMapper(),accountNumber);
@@ -72,5 +88,11 @@ public class BankAccountServices {
         String sql = "UPDATE BANK SET id = ?, name = ?, accountNumber = ?, balance = ?;";
         jdbcTemplate.update(sql,bankAccount.getId(),bankAccount.getName(),bankAccount.getAccountNumber(),bankAccount.getBalance());
         return bankAccount;
+    }
+
+    public Object getTransactions(String accountNumber) {
+        String sql = "select bank.accountnumber,transactions.amount,transactions.status from bank join transactions on\n" +
+                "bank.accountnumber = transactions.accountnumber;";
+        return jdbcTemplate.queryForList(sql);
     }
 }

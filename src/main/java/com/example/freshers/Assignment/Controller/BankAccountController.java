@@ -32,13 +32,18 @@ public class BankAccountController {
 
     @RequestMapping(value = "/_debit/{accountNumber}",method = RequestMethod.PUT)
     public ResponseEntity<String> debitAmount(@PathVariable String accountNumber, @RequestBody BigDecimal debitAmount){
-        bankAccountProducer.debitAmountByKafka(accountNumber,debitAmount);
+        bankAccountProducer.debitAmountByKafka(accountNumber,debitAmount,"Debit");
         return new ResponseEntity<>("Successfully debited the amount from bank account with accountNumber: " + accountNumber,HttpStatus.ACCEPTED);
     }
 
     @RequestMapping(value = "/_credit/{accountNumber}",method = RequestMethod.PUT)
     public ResponseEntity<String> creditAmount(@PathVariable String accountNumber, @RequestBody BigDecimal creditAmount){
-        bankAccountProducer.creditAmountByKafka(accountNumber,creditAmount);
+        bankAccountProducer.creditAmountByKafka(accountNumber,creditAmount,"Credit");
         return new ResponseEntity<>("Successfully credited the amount from bank account with accountNumber: " + accountNumber,HttpStatus.ACCEPTED);
+    }
+
+    @RequestMapping(value = "/_transactions/{accountNumber}",method = RequestMethod.GET)
+    public ResponseEntity<Object> getTransactions(@PathVariable String accountNumber){
+        return new ResponseEntity<Object>(bankAccountServices.getTransactions(accountNumber),HttpStatus.OK);
     }
 }

@@ -3,6 +3,7 @@ package com.example.freshers.Assignment.Producer;
 import com.example.freshers.Assignment.models.User;
 import com.example.freshers.Assignment.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
@@ -10,6 +11,12 @@ import org.springframework.stereotype.Service;
 public class KafkaProducerService {
     private final KafkaTemplate<String, User> kafkaTemplate;
     private final UserServices userServices;
+
+    @Value("${kafka.topic.assignment-topic}")
+    private String assignmentTopic;
+
+    @Value("${kafka.topic.assignment-topic-update}")
+    private String assignmentTopicUpdate;
 
     @Autowired
     public KafkaProducerService(KafkaTemplate<String, User> kafkaTemplate, UserServices userServices) {
@@ -19,13 +26,13 @@ public class KafkaProducerService {
 
     public void createUserByKafka(User user){
         if(userServices.getUserByNameAndMobileNumber(user.getName(),user.getMobileNumber())){
-            kafkaTemplate.send("assignment-topic",user);
+            kafkaTemplate.send(assignmentTopic,user);
         }else{
             throw new IllegalArgumentException("User with the same name and mobile number already exists");
         }
     }
 
     public void updateUserByKafka(User user){
-        kafkaTemplate.send("assignment-topic-update",user);
+        kafkaTemplate.send(assignmentTopicUpdate,user);
     }
 }

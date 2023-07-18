@@ -22,24 +22,26 @@ public class BankAccountConsumer {
         this.bankAccountServices = bankAccountServices;
     }
 
-    @KafkaListener(topics = "bank-account-debit")
+    @KafkaListener(topics = "${kafka.topic.bank-account-debit}")
     public void debitAmount(String message) throws JsonProcessingException {
         AccountTransactions accountTransactions = objectMapper.readValue(message,AccountTransactions.class);
         BankAccount bankAccount = bankAccountServices.findByAccountNumber(accountTransactions.getAccountNumber());
         BigDecimal currentBalance = bankAccount.getBalance();
         BigDecimal amountDebit = accountTransactions.getAmount();
         BigDecimal amount = currentBalance.subtract(amountDebit);
+        bankAccountServices.insertTransaction(accountTransactions.getAccountNumber(),amountDebit, accountTransactions.getStatus());
         bankAccount.setBalance(amount);
         bankAccountServices.update(bankAccount);
     }
 
-    @KafkaListener(topics = "bank-account-credit")
+    @KafkaListener(topics = "${kafka.topic.bank-account-credit}")
     public void creditAmount(String message) throws JsonProcessingException {
         AccountTransactions accountTransactions = objectMapper.readValue(message,AccountTransactions.class);
         BankAccount bankAccount = bankAccountServices.findByAccountNumber(accountTransactions.getAccountNumber());
         BigDecimal currentBalance = bankAccount.getBalance();
         BigDecimal amountCredit = accountTransactions.getAmount();
         BigDecimal amount = currentBalance.add(amountCredit);
+        bankAccountServices.insertTransaction(accountTransactions.getAccountNumber(),amountCredit, accountTransactions.getStatus());
         bankAccount.setBalance(amount);
         bankAccountServices.update(bankAccount);
     }

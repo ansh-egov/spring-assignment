@@ -1,0 +1,8 @@
+com.example.freshers.Assignment
+com.example.freshers.Assignment.Consumer
+com.example.freshers.Assignment.Controller
+com.example.freshers.Assignment.Mapper
+com.example.freshers.Assignment.Producer
+com.example.freshers.Assignment.Utils
+com.example.freshers.Assignment.models
+com.example.freshers.Assignment.services

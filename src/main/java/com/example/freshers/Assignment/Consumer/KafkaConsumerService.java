@@ -18,14 +18,14 @@ public class KafkaConsumerService {
         this.objectMapper = objectMapper;
         this.userServices = userServices;
     }
-    @KafkaListener(topics = "assignment-topic", groupId = "console-consumer-9782837c-0239-4cae-bfb1-b61aca3c3819")
+    @KafkaListener(topics = "${kafka.topic.assignment-topic}")
     public void consumeMessageAndCreateUser(String message) throws JsonProcessingException, UserCreationException {
         // Process the received message
         User user = objectMapper.readValue(message,User.class);
         userServices.createUsers(user);
     }
 
-    @KafkaListener(topics = "assignment-topic-update", groupId = "console-consumer-9782837c-0239-4cae-bfb1-b61aca3c3819")
+    @KafkaListener(topics = "${kafka.topic.assignment-topic-update}")
     public void consumeMessageAndUpdateUser(String message) throws JsonProcessingException {
         // Process the received message
         User user = objectMapper.readValue(message,User.class);
