@@ -3,6 +3,7 @@ package com.example.freshers.Assignment.Controller;
 import com.example.freshers.Assignment.Consumer.KafkaConsumerService;
 import com.example.freshers.Assignment.Producer.KafkaProducerService;
 import com.example.freshers.Assignment.models.User;
+import com.example.freshers.Assignment.models.UserList;
 import com.example.freshers.Assignment.models.UserSearchCriteria;
 import com.example.freshers.Assignment.services.UserServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,9 +34,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/_create",method = RequestMethod.POST)
-    public ResponseEntity<String> createUser(@RequestBody List<User> users) throws IOException{
+    public ResponseEntity<String> createUser(@RequestBody UserList users) throws IOException{
         try {
-            for(User user:users){
+            for (User user:users.getUsers()){
                 kafkaProducerService.createUserByKafka(user);
             }
             return new ResponseEntity<String>("Users created Successfully and Pushed to the kafka Topic",HttpStatus.CREATED);
@@ -56,9 +57,9 @@ public class UserController {
     }
 
     @RequestMapping(value = "/_update", method = RequestMethod.PATCH)
-    public ResponseEntity<String> updateUser(@RequestBody List<User> users){
+    public ResponseEntity<String> updateUser(@RequestBody UserList users){
         try{
-            for (User user: users){
+            for (User user: users.getUsers()){
                 if(user.getId() == null){
                     List<User> user1 = userServices.searchUser(new UserSearchCriteria(user.getId(),user.getMobileNumber()));
                     user.setId(user1.get(0).getId());

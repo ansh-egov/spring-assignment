@@ -3,7 +3,7 @@ package com.example.freshers.Assignment.models;
 import java.util.UUID;
 
 public class User {
-    private UUID id;
+    private String id;
     private String name;
     private String gender;
     private String mobileNumber;
@@ -46,11 +46,11 @@ public class User {
                 '}';
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

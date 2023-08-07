@@ -11,6 +11,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -31,6 +34,9 @@ public class UserServices {
     @Value("${api.address-url}")
     private String url;
 
+    @Value("${api.id-url}")
+    private String idUrl;
+
     @Autowired
     public UserServices(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
@@ -40,7 +46,7 @@ public class UserServices {
     public void createTable() {
         jdbcTemplate.execute(
                 "CREATE TABLE IF NOT EXISTS my_users (" +
-                        "id UUID DEFAULT uuid_generate_v4(), " +
+                        "id VARCHAR(255), " +
                         "name VARCHAR(255), " +
                         "gender VARCHAR(255), " +
                         "mobileNumber VARCHAR(255), " +
@@ -58,6 +64,7 @@ public class UserServices {
 
     public List<User> getAllUsers(){
         String query = "SELECT * FROM MY_USERS";
+        System.out.println(getId());
         return jdbcTemplate.query(query, new UserRowMapper());
     }
 
@@ -68,17 +75,33 @@ public class UserServices {
     }
 
     public void createUsers(User user) throws UserCreationException {
-        String sql = "INSERT INTO my_users (name, gender, mobileNumber, address, isActive, createdTime) VALUES (?, ?, ?, ?::json, ?, ?)";
+        String sql = "INSERT INTO my_users (id,name, gender, mobileNumber, address, isActive, createdTime) VALUES (?,?, ?, ?, ?::json, ?, ?)";
         Long currentTime = Instant.now().getEpochSecond();
         try {
+            user.setId(getId());
            User createdUser = createUser(user,sql,currentTime);
         } catch (DataIntegrityViolationException e) {
             throw  new DataIntegrityViolationException(e.toString());
         }
     }
+    private String getId(){
+        String requestJson = "{\"RequestInfo\": {}, \"idRequests\": [{\"tenantId\": \"pb\", \"idName\": \"dtr.registrationid\"}]}";
 
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+
+        HttpEntity<String> requestEntity = new HttpEntity<>(requestJson, headers);
+        ResponseEntity<Map> response = restTemplate.postForEntity(idUrl,requestEntity,Map.class);
+        Map data = response.getBody();
+        List<Map<String, String>> idResponses = (List<Map<String, String>>) data.get("idResponses");
+
+        Map<String, String> firstIdResponse = idResponses.get(0);
+
+        String idValue = firstIdResponse.get("id");
+        return idValue;
+    }
     private User createUser(User user, String sql, Long currentTime) {
-        RestTemplate restTemplate = new RestTemplate();
+//        RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<Map> response = restTemplate.getForEntity(url, Map.class);
         Map<String, Object> data = response.getBody();
         Map<String, Object> addressData = (Map<String, Object>) data.get("address");
@@ -110,16 +133,16 @@ public class UserServices {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(connection -> {
             PreparedStatement ps = connection.prepareStatement(sql, new String[]{"id"});
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getGender());
-            ps.setString(3, user.getMobileNumber());
-            ps.setString(4, addressJson);
-            ps.setString(5, user.getIsActive());
-            ps.setLong(6, currentTime);
+            ps.setString(1,user.getId());
+            ps.setString(2, user.getName());
+            ps.setString(3, user.getGender());
+            ps.setString(4, user.getMobileNumber());
+            ps.setString(5, addressJson);
+            ps.setString(6, user.getIsActive());
+            ps.setLong(7, currentTime);
             return ps;
         }, keyHolder);
 
-        user.setId(UUID.randomUUID());
         user.setCreatedTime(currentTime);
 
         return user;
@@ -174,7 +197,7 @@ public class UserServices {
         jdbcTemplate.update(sql.toString(), params.toArray());
     }
 
-    public void deleteUser(UUID id) {
+    public void deleteUser(String id) {
         String sql = "DELETE FROM MY_USERS WHERE ID = ?";
         jdbcTemplate.update(sql, id);
     }

@@ -3,31 +3,27 @@ package com.example.freshers.Assignment.models;
 import java.util.UUID;
 
 public class UserSearchCriteria {
-    private UUID id;
+    private String id;
     private String mobileNumber;
 
     public UserSearchCriteria(){
 
     }
 
-    public UserSearchCriteria(UUID id) {
+    public UserSearchCriteria(String id) {
         this.id = id;
     }
 
-    public UserSearchCriteria(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
-    }
-
-    public UserSearchCriteria(UUID id, String mobileNumber) {
+    public UserSearchCriteria(String id, String mobileNumber) {
         this.id = id;
         this.mobileNumber = mobileNumber;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

@@ -30,6 +30,6 @@ public class KafkaConsumerService {
         // Process the received message
         User user = objectMapper.readValue(message,User.class);
         userServices.updateUser(user);
-        System.out.println(user);
+//        System.out.println(user);
     }
 }
